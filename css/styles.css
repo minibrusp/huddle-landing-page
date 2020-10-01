@@ -4,6 +4,13 @@
    --Hover-color: hsl(310, 71%, 49%);
 }
 
+::selection {
+   background: var(--Hover-color); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+   background: var(--Hover-color); /* Gecko Browsers */
+}
+
 html {
    box-sizing: border-box;
    font-size: 15px;
@@ -18,13 +25,15 @@ body {
    background-image: url(../images/bg-mobile.svg);
    background-position: top;
    background-repeat: no-repeat;
-   background-size: contain;
+   background-size: 100vw 70vh;
    font-family: 'Poppins', sans-serif;
+   position: relative;
 }
 
 main {
-   margin: 0 auto;
+   margin: 20px auto;
    padding: 0 5vw;
+   position: relative;
 }
 
 .txt-align-c {
@@ -33,13 +42,20 @@ main {
 
 /* header */
 header {
-   margin: 0 auto;
+   margin: 40px auto 70px auto;
+   position: relative;
+   max-width: 709px;
 }
 header img {
    max-height: 3.247rem;
    margin: 0 auto;
 }
 /* hero */
+section.hero {
+   position: relative;
+   margin: 0 auto;
+   max-width: 709px;
+}
 section.hero img {
    max-width: 100%;
 }
@@ -47,17 +63,21 @@ section.hero img {
 /* mid */
 section.mid {
    color: white;
-   margin: 30px 0;
+   margin: 50px 0;
+   position: relative;
 }
 section.mid h1 {
-   font-size: 2.566rem;
+   font-size: 2.027rem;
    font-family: 'Open Sans', sans-serif;
+   max-width: 375px;
+   margin: 0 auto;
 }
 
 section.mid p {
    
-   font-size: 1.266rem;
+   font-size: 1.125rem;
    line-height: 1.5;
+   padding: 10px 0 30px 0;
 }
 
 section.mid a {
@@ -66,7 +86,7 @@ section.mid a {
    text-decoration: none;
    background-color: white;
    padding: 13px 20vw;
-   max-width: 30vw;
+   max-width: 370px;
    border-radius: 50px;
    box-shadow: 0px 5px 15px -5px hsl(257, 86%, 14%);
    transition: .3s background-color,
@@ -78,10 +98,16 @@ section.mid a:hover {
 }
 
 /* icons */
+section.social {
+   position: relative;
+   margin: 90px 0 30px 0;
+}
 section.social a {
    margin: 0 5px;
 }
 section.social i.fab {
+   display: inline-block;
+   position: relative;
    color: white;
    font-size: 1.424rem;
    padding: 0.702rem;
@@ -103,6 +129,8 @@ section.social a:hover i.fab {
 /*footer */
 footer {
    position: relative;
-   bottom: 0;
-   width: 100vw;
+   bottom: -10px;
+}
+footer a:hover {
+   color: var(--Hover-color);
 }
