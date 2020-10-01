@@ -1,6 +1,7 @@
 /* variables */
 :root {
    --Primary-violet: hsl(257, 40%, 49%);
+   --Hover-color: hsl(310, 71%, 49%);
 }
 
 html {
@@ -14,4 +15,94 @@ html {
 
 body {
    background-color: var(--Primary-violet);
+   background-image: url(../images/bg-mobile.svg);
+   background-position: top;
+   background-repeat: no-repeat;
+   background-size: contain;
+   font-family: 'Poppins', sans-serif;
+}
+
+main {
+   margin: 0 auto;
+   padding: 0 5vw;
+}
+
+.txt-align-c {
+   text-align: center;
+}
+
+/* header */
+header {
+   margin: 0 auto;
+}
+header img {
+   max-height: 3.247rem;
+   margin: 0 auto;
+}
+/* hero */
+section.hero img {
+   max-width: 100%;
+}
+
+/* mid */
+section.mid {
+   color: white;
+   margin: 30px 0;
+}
+section.mid h1 {
+   font-size: 2.566rem;
+   font-family: 'Open Sans', sans-serif;
+}
+
+section.mid p {
+   
+   font-size: 1.266rem;
+   line-height: 1.5;
+}
+
+section.mid a {
+   color: var(--Primary-violet);
+   font-size: 1.125rem;
+   text-decoration: none;
+   background-color: white;
+   padding: 13px 20vw;
+   max-width: 30vw;
+   border-radius: 50px;
+   box-shadow: 0px 5px 15px -5px hsl(257, 86%, 14%);
+   transition: .3s background-color,
+               .3s color;
+}
+section.mid a:hover {
+   background-color: var(--Hover-color);
+   color: white;
+}
+
+/* icons */
+section.social a {
+   margin: 0 5px;
+}
+section.social i.fab {
+   color: white;
+   font-size: 1.424rem;
+   padding: 0.702rem;
+   border-radius: 50%;
+   border: 1px solid #fff;
+   transition: .3s border-color, 
+               .3s background-color;
+}
+section.social a:nth-of-type(1) i.fab{
+   padding: 0.702rem 0.882rem;
+}
+
+section.social a:hover i.fab {
+   /* border: 2px solid #fff; */
+   background-color: var(--Hover-color);
+   border-color: var(--Hover-color);
+}
+
+/*footer */
+footer {
+   position: relative;
+   bottom: 0;
+   width: 100vw;
 }
