@@ -42,12 +42,12 @@ main {
 
 /* header */
 header {
-   margin: 40px auto 70px auto;
+   margin: 20px auto 50px auto;
    position: relative;
    max-width: 709px;
 }
 header img {
-   max-height: 3.247rem;
+   max-height: 2.887rem;
    margin: 0 auto;
 }
 /* hero */
@@ -85,8 +85,7 @@ section.mid a {
    font-size: 1.125rem;
    text-decoration: none;
    background-color: white;
-   padding: 13px 20vw;
-   max-width: 370px;
+   padding: 13px 90px;
    border-radius: 50px;
    box-shadow: 0px 5px 15px -5px hsl(257, 86%, 14%);
    transition: .3s background-color,
@@ -100,7 +99,7 @@ section.mid a:hover {
 /* icons */
 section.social {
    position: relative;
-   margin: 90px 0 30px 0;
+   margin: 75px 0 30px 0;
 }
 section.social a {
    margin: 0 5px;
@@ -134,3 +133,5 @@ footer {
 footer a:hover {
    color: var(--Hover-color);
 }
+
+/* querries */
