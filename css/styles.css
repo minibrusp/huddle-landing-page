@@ -71,6 +71,7 @@ section.mid h1 {
    font-family: 'Open Sans', sans-serif;
    max-width: 375px;
    margin: 0 auto;
+   line-height: 1.5;
 }
 
 section.mid p {
@@ -78,6 +79,7 @@ section.mid p {
    font-size: 1.125rem;
    line-height: 1.5;
    padding: 10px 0 30px 0;
+   font-weight: 300;
 }
 
 section.mid a {
@@ -153,8 +155,6 @@ section.social li.instagram:hover > a {
    color: #e1306c;
 }
 
-
-
 /*footer */
 footer {
    position: relative;
@@ -174,11 +174,124 @@ footer a:hover {
 /* querries */
 
 @media screen and (min-width: 900px) {
+   body {
+      background-image: url(../images/bg-desktop.svg);
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: 100vw 100vh;
+      margin: 0;
+      padding: 0;
+   }
+
+   main {
+      margin: 0 auto;
+      padding: 0 0;
+      display: flex;
+      flex-direction: column;
+      width: 95vw;
+
+   }
+
    .grid-container {
       display: grid;
-      grid-area: 
+      grid-template-columns: minmax(400px,500px) 1fr;
+      grid-template-rows: .5fr 2fr .5fr;
+      grid-template-areas: 
          "header header"
          "hero mid"
          "footer footer";
+      column-gap: 15px;
+   }
+
+   header {
+      grid-area: header;
+      justify-self: start;
+      margin: 30px 20px 40px 0;
+   }
+
+   section.hero {
+      grid-area: hero;
+      align-self: center;
+      margin: 0;
+   }
+
+   section.hero img {
+      height: 60vh;
+   }
+
+   section.mid {
+      grid-area: mid;
+      margin: 0;
+      text-align: left;
+      padding-top: 50px;
+   }
+
+   section.mid p {
+      font-size: 1rem;
+   }
+
+   section.mid h1,
+   section.mid p {
+      margin: 0;
+   }
+
+   section.mid a {
+      padding: 13px 60px;
+   }
+
+   section.social {
+      grid-area: footer;
+      justify-self: end;
+      align-self: center;
+      margin: 0;
+   }
+
+   footer p {
+      padding: 0;
+      margin: 0;
+   }
+}
+
+@media screen and (min-width: 1100px) {
+   .grid-container {
+      grid-template-columns: minmax(546.453px,546.453px);
+      column-gap: 30px;
+   }
+
+   body {
+      width: 100%;
+      margin: 0 auto;
+   }
+
+   main {
+      /* padding: 0 5vw; */
+      margin: 0 auto;
+   }
+
+   section.hero {
+      grid-area: hero;
+      justify-items: start;
+   }
+
+   /* .section.mid p {
+      max-width: 400px;
+   } */
+}
+
+@media screen and (min-width: 1300px) {
+   .grid-container {
+      grid-template-columns: max-content 546.453px;
+      /* column-gap: unset; */
+      max-width: 1300px;
+      margin: 0 auto;
+      justify-content: center;
+   }
+
+   main {
+      margin: 0 auto;
+   }
+
+   .section.mid {
+      margin-right: 50px;
    }
 }
