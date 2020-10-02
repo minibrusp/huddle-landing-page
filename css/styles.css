@@ -160,8 +160,15 @@ footer {
    position: relative;
    bottom: -10px;
 }
+
+footer a {
+   transition: .3s color,
+   .3s background-color;
+}
 footer a:hover {
+   background-color: #fff;
    color: var(--Hover-color);
+   
 }
 
 /* querries */
