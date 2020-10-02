@@ -85,7 +85,7 @@ section.mid a {
    font-size: 1.125rem;
    text-decoration: none;
    background-color: white;
-   padding: 13px 90px;
+   padding: 13px 100px;
    border-radius: 50px;
    box-shadow: 0px 5px 15px -5px hsl(257, 86%, 14%);
    transition: .3s background-color,
@@ -101,29 +101,59 @@ section.social {
    position: relative;
    margin: 75px 0 30px 0;
 }
-section.social a {
-   margin: 0 5px;
-}
-section.social i.fab {
-   display: inline-block;
-   position: relative;
-   color: white;
-   font-size: 1.424rem;
-   padding: 0.702rem;
-   border-radius: 50%;
-   border: 1px solid #fff;
-   transition: .3s border-color, 
-               .3s background-color;
-}
-section.social a:nth-of-type(1) i.fab{
-   padding: 0.702rem 0.882rem;
+
+section.social ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: inline-flex;
+   justify-content: center;
 }
 
-section.social a:hover i.fab {
-   /* border: 2px solid #fff; */
-   background-color: var(--Hover-color);
-   border-color: var(--Hover-color);
+section.social ul > li {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin: 0px 7px;
 }
+
+section.social li > a {
+   position: relative;
+   height: 35px;
+   width: 35px;
+   display: block;
+   border: 1px solid #fff;
+   color: #fff;
+   text-align: center;
+   border-radius: 50%;
+   transition: .3s color, 
+               .3s background-color;
+}
+
+section.social a > i{
+   font-size: 1.067rem;
+   line-height: 35px;
+}
+section.social a > i.fa-instagram {
+   font-size: 1.215rem;
+   line-height: 34px;
+}
+
+section.social li.facebook:hover > a {
+   background-color: white;
+   color: #3b5999;
+}
+section.social li.twitter:hover > a {
+   background-color: white;
+   color: #46c1f6;
+}
+section.social li.instagram:hover > a {
+   background-color: white;
+   color: #e1306c;
+}
+
+
 
 /*footer */
 footer {
@@ -135,3 +165,13 @@ footer a:hover {
 }
 
 /* querries */
+
+@media screen and (min-width: 900px) {
+   .grid-container {
+      display: grid;
+      grid-area: 
+         "header header"
+         "hero mid"
+         "footer footer";
+   }
+}
